@@ -44,9 +44,8 @@ class Weather extends React.Component{
     return (
       <div>
         <Switch>
-          <Route path={`${match.path}/:cityId`} component={Weather} />
-          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p><a href={`${match.path}`}>{item}</a></p>;}) } />}
-          />
+          <Route path={`${match.path}/:cityId`} component={"hi"} />
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a href={match.path+"/"+item}>{item}</a></p>;}) } />} />
         </Switch>
       </div>
     );
