@@ -5,12 +5,12 @@ const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
 const API_WEATHER = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name';
 
 class CityWeather extends React.Component {
-  state = {
+    state = {
       weather: null
     };
 
     async componentDidMount() {
-      const cityId = 'Daejeon';
+      const { cityId } = await this.props.match.params;
       const api = `${API_WEATHER}/${cityId}`;
 
       const weather = await fetch(api)
@@ -24,6 +24,7 @@ class CityWeather extends React.Component {
 
     render() {
       const { cityId } = this.props.match.params;
+
       const { weather } = this.state;
 
       if (!weather) {
