@@ -2,8 +2,7 @@ import React from 'react';
 import { Switch, Route} from 'react-router';
 
 const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
-const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
-const API_WEATHER = 'http://demo6468405.mockable.io/weather-crawlers/current-weathers/by-city-name';
+const API_WEATHER = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name';
 
 class CityWeather extends React.Component {
   state = {
@@ -11,7 +10,6 @@ class CityWeather extends React.Component {
     };
 
     async componentDidMount() {
-      // const { cityId } = this.props.match.params;
       const cityId = 'Daejeon';
       const api = `${API_WEATHER}/${cityId}`;
 
@@ -65,18 +63,6 @@ class Weather extends React.Component{
     this.setState({
       cities: city_list
     });
-
-    /*  console.log('CDM!!');
-    /*setTimeout(() => {
-        this.setState({
-        foo: 'HELLO WORLD'
-        });
-      }, 2000);
-
-
-      this.setState({
-        foo: 'HELLO WORLD'
-      });*/
   }
 
   render() {
@@ -97,7 +83,5 @@ class Weather extends React.Component{
     );
   }
 }
-
-
 
 export default Weather;
