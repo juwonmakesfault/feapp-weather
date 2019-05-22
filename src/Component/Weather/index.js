@@ -3,6 +3,7 @@ import { Switch, Route} from 'react-router';
 
 const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
 const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
+
 const API_WEATHER = 'http://demo6468405.mockable.io/weather-crawlers/current-weathers/by-city-name';
 
 class CityWeather extends React.Component {
