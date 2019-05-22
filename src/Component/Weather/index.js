@@ -20,8 +20,6 @@ class Weather extends React.Component{
       cities: city_list
     });
 
-
-
     /*  console.log('CDM!!');
     /*setTimeout(() => {
         this.setState({
@@ -33,7 +31,6 @@ class Weather extends React.Component{
       this.setState({
         foo: 'HELLO WORLD'
       });*/
-
   }
 
   render() {
@@ -47,7 +44,8 @@ class Weather extends React.Component{
     return (
       <div>
         <Switch>
-          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p>{item}</p>;}) } />} />
+          <Route path={`${match.path}/:cityId`} component={"hi"} />
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a href={match.path+"/"+item}>{item}</a></p>;}) } />} />
         </Switch>
       </div>
     );
