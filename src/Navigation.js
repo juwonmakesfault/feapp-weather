@@ -4,10 +4,10 @@ import './App.css';
 
 const Navigation = () => {
     return (
-        <div>
-            <NavLink to="/"><h3>Home</h3></NavLink>
-            <Link to="/about"><h3>About</h3></Link>
-            <Link to="/weather"><h3>Weather</h3></Link>
+        <div class="navi">
+            <NavLink to="/"><a>Home</a></NavLink>
+            <Link to="/about"><a>About</a></Link>
+            <Link to="/weather"><a>Weather</a></Link>
         </div>
     );
 };
