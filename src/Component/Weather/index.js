@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const API_CITES = 'http://localhost:8080/weather-crawler/available-cities';
-
+//const API_CITES = 'http://localhost:8080/weather-crawler/available-cities';
+const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
 class Weather extends React.Component{
   state = {
     cities: null
