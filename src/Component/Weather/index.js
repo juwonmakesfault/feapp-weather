@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route} from 'react-router';
 
-const API_CITES = 'http://localhost:8080/weather-crawler/available-cities';
-const SELECT_CITE = 'http://localhost:8080/weather-crawler/current-weathers/by-city-name/';
+const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
+const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
 
 class Weather extends React.Component{
   state = {
