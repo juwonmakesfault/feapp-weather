@@ -12,6 +12,7 @@
 .DS_Store
 .idea
 .idea/*
+git rm --cached workspace.xml
 
 # production
 /build
