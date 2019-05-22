@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route} from 'react-router';
+import './weather.css';
 
 const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
 const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
@@ -92,7 +93,7 @@ class Weather extends React.Component{
       <div>
         <Switch>
           <Route path={`${match.path}/:cityId`} component={CityWeather} />
-          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a href={match.path+"/"+item}>{item}</a></p>;}) } />} />
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a class="cityName" href={match.path+"/"+item}>{item}</a></p>;}) } />} />
         </Switch>
       </div>
     );

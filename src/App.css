@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(167,236,149);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 .App-footer {
-  background-color: #282c34;
+  background-color: white;
   min-height: 10vh;
   display: flex;
   flex-direction: column;

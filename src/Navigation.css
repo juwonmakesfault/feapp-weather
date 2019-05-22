@@ -1,0 +1,19 @@
+.navi > a{
+    font-size: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+.navi > a:link, a:visited{
+    color: yellow;
+    text-decoration: none;
+}
+
+.navi{
+    background-color: #ef8888;
+}
+
+.navi > a:hover{
+    background-color: aqua;
+    color: blue;
+}
