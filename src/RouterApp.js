@@ -12,9 +12,8 @@ const RouterApp = () => {
   return (
     <div className = "App">
       <Header city = {city}/>
-
-      <Route exact path="/" component={Weather}/>
       <Route path="/about" component={About}/>
+      <Route path="/weather" component={Weather}/>
     </div>
   );
 };
