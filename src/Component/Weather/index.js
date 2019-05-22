@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const API_CITES = 'http://localhost:8088/available-cities';
+const API_CITES = 'http://localhost:8080/available-cities';
 
 class Weather extends React.Component{
   state = {
