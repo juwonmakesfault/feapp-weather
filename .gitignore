@@ -17,6 +17,9 @@ git rm --cached workspace.xml
 # production
 /build
 
+#IDE metadata
+**.idea/**
+
 # misc
 .DS_Store
 .env.local
