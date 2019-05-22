@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route} from 'react-router';
 
-const API_CITES = 'http://localhost:8080/weather-crawler/available-cities';
-const SELECT_CITE = 'http://localhost:8080/weather-crawler/current-weathers/by-city-name/';
+const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
+const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
 
 class Weather extends React.Component{
   state = {
@@ -20,8 +20,6 @@ class Weather extends React.Component{
       cities: city_list
     });
 
-
-
     /*  console.log('CDM!!');
     /*setTimeout(() => {
         this.setState({
@@ -33,7 +31,6 @@ class Weather extends React.Component{
       this.setState({
         foo: 'HELLO WORLD'
       });*/
-
   }
 
   render() {
@@ -47,7 +44,9 @@ class Weather extends React.Component{
     return (
       <div>
         <Switch>
-          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p>{item}</p>;}) } />} />
+          <Route path={`${match.path}/:cityId`} component={Weather} />
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p><a href={`${match.path}`}>{item}</a></p>;}) } />}
+          />
         </Switch>
       </div>
     );
