@@ -1,7 +1,8 @@
 import React from 'react';
-
+import { Switch, Route} from 'react-router';
 
 const API_CITES = 'http://localhost:8080/weather-crawler/available-cities';
+const SELECT_CITE = 'http://localhost:8080/weather-crawler/current-weathers/by-city-name/';
 
 class Weather extends React.Component{
   state = {
@@ -36,6 +37,7 @@ class Weather extends React.Component{
   }
 
   render() {
+    const { match } = this.props;
     const { cities } = this.state;
 
     if (!cities){
@@ -44,11 +46,9 @@ class Weather extends React.Component{
 
     return (
       <div>
-        <ul>
-          {cities.map(item => {
-            return <li>{item}</li>;
-          })}
-        </ul>
+        <Switch>
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p>{item}</p>;}) } />} />
+        </Switch>
       </div>
     );
   }
