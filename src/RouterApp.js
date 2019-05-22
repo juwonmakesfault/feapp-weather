@@ -1,10 +1,9 @@
 import React from 'react';
 import  { Route } from 'react-router-dom';
 import Weather from './Component/Weather';
+import About from './Component/About';
 import Header from './Header';
 
-
-const About = () => <div>About</div>;
 
 const RouterApp = () => {
   const city = "Daejeon";
