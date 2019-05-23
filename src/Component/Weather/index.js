@@ -1,18 +1,17 @@
 import React from 'react';
 import { Switch, Route} from 'react-router';
+import './weather.css';
 
 const API_CITES = 'http://192.168.1.114:8080/weather-crawler/available-cities';
-const SELECT_CITE = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name/';
-const API_WEATHER = 'http://demo6468405.mockable.io/weather-crawlers/current-weathers/by-city-name';
+const API_WEATHER = 'http://192.168.1.114:8080/weather-crawler/current-weathers/by-city-name';
 
 class CityWeather extends React.Component {
-  state = {
+    state = {
       weather: null
     };
 
     async componentDidMount() {
-      // const { cityId } = this.props.match.params;
-      const cityId = 'Daejeon';
+      const { cityId } = await this.props.match.params;
       const api = `${API_WEATHER}/${cityId}`;
 
       const weather = await fetch(api)
@@ -26,6 +25,7 @@ class CityWeather extends React.Component {
 
     render() {
       const { cityId } = this.props.match.params;
+
       const { weather } = this.state;
 
       if (!weather) {
@@ -65,18 +65,6 @@ class Weather extends React.Component{
     this.setState({
       cities: city_list
     });
-
-    /*  console.log('CDM!!');
-    /*setTimeout(() => {
-        this.setState({
-        foo: 'HELLO WORLD'
-        });
-      }, 2000);
-
-
-      this.setState({
-        foo: 'HELLO WORLD'
-      });*/
   }
 
   render() {
@@ -88,10 +76,10 @@ class Weather extends React.Component{
     }
 
     return (
-      <div>
+      <div class="divclass">
         <Switch>
           <Route path={`${match.path}/:cityId`} component={CityWeather} />
-          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a href={match.path+"/"+item}>{item}</a></p>;}) } />} />
+          <Route exact path={match.path} render={ ()=> cities.map(item => { return <p> <a class="cityName" href={match.path+"/"+item}>{item}</a></p>;}) } />} />
         </Switch>
       </div>
     );

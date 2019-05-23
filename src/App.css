@@ -9,8 +9,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 50vh;
+  background-color: rgb(167,236,149);
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-footer {
+  background-color: white;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,4 +41,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navi > a{
+  font-size: 50px;
 }

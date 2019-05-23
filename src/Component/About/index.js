@@ -1,4 +1,5 @@
 import React from 'react';
+import './About.css';
 
 class About extends React.Component{
 
@@ -10,7 +11,7 @@ class About extends React.Component{
     return (
       <div>
         <h1>우리의 팀원을 소개합니다</h1>
-        <h3>1조 : 주원이가잘못했네</h3>
+        <h3>1조 : <u>주원</u>이가잘못했네</h3>
         <ul>
             <li>강재민</li>
             <li>권재승</li>

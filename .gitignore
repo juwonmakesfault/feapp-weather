@@ -8,8 +8,17 @@
 # testing
 /coverage
 
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+.idea/*
+git rm --cached workspace.xml
+
 # production
 /build
+
+#IDE metadata
+**.idea/**
 
 # misc
 .DS_Store
@@ -17,6 +26,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.idea/
 
 npm-debug.log*
 yarn-debug.log*
